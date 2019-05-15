@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Choose a plan {% endblock %}
+{% block content %}
+<h2>Form control: inline radio buttons</h2>
+  <p>The form below contains three inline radio buttons:</p>
+  <form method="post">
+  {% csrf_token %}
+{#      <label>username <input value={{ user.username }}></label>#}
+    <label class="radio-inline">
+      <input type="radio" name="choice" checked value="1">Option 1
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="choice" value="2">Option 2
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="choice" value="3">Option 3
+    </label>
+  <button type="submit" value={{ form.fields }} >click</button>
+  </form>
+{% endblock %}
